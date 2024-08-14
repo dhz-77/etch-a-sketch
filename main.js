@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const rows = 16;
     const columns = 16;
 
-    // Loop to create grid items and append them to the body
+    // Loop to create grid items and append them to the container div
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < columns; j++) {
             const gridItem = document.createElement("div");
@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
             gridItem.style.left = j * 100 + "px";
             gridItem.style.top = i * 100 + "px";
 
-            // Append the grid item to the container div
             container.appendChild(gridItem);
         }
     }
