@@ -9,12 +9,16 @@ document.addEventListener("DOMContentLoaded", function() {
     setEventListener();
 
     btn.addEventListener("click", () => {
-        const gridSize = Number(window.prompt("Enter a number up to 100:", "16"));
+        const gridSize = window.prompt("Enter a number up to 100:", "16");
 
-        container.innerHTML = "";
-        let rows = gridSize, columns = gridSize;
-        setGrid(rows, columns);
-        setEventListener();
+        if (gridSize === null || gridSize === "") {
+            return;
+        } else {
+            container.innerHTML = "";
+            let rows = gridSize, columns = gridSize;
+            setGrid(rows, columns);
+            setEventListener();
+        }
     })
 
     // Loop to create grid items and append them to the container div
