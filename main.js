@@ -35,12 +35,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 gridItem.classList.add("grid-item");
     
                 // Set the position of each grid item
-                gridItem.style.left = j * 100 + "px";
-                gridItem.style.top = i * 100 + "px";
-    
+                 //gridItem.style.left = j * 100 + "px";
+                 //gridItem.style.top = i * 100 + "px";
+                
+                gridItem.style.width = (960 / (rows)) + "px"
                 container.appendChild(gridItem);
             }
-        }    
+        }
+
     }
     
     function setEventListener() {
