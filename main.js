@@ -41,9 +41,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
         elementsArray.forEach(function(elem) {
             elem.addEventListener("mouseover", () => {
-                elem.style.backgroundColor = "blue";
+                elem.style.backgroundColor = randomRGB();
             });
         });
+    }
+
+    function randColorNum() {
+        return Math.floor(Math.random() * 256);
+    }
+    
+    function randomRGB() {
+        return `rgb(${randColorNum()},${randColorNum()},${randColorNum()})`;
     }
 
 });
