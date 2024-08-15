@@ -23,8 +23,8 @@ button {
     border: 1px solid black;
     margin: auto;
     padding: 0;
-    width: 960px;
-    height: auto;
+    width: 700px;
+    height: 700px;
     display: flex;
     flex-wrap: wrap;
 }
