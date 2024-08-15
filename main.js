@@ -5,17 +5,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const container = document.querySelector("#container");
     const btn = document.querySelector("button");
 
-    setGrid(16, 16);
+    let rows = 16, columns = 16;
+
+    setGrid(rows, columns);
     setEventListener();
 
     btn.addEventListener("click", () => {
-        const gridSize = window.prompt("Enter a number up to 100:", "16");
+        const gridSize = window.prompt("Enter a number up to 100:", rows);
 
         if (gridSize === null || gridSize === "") {
             return;
         } else {
             container.innerHTML = "";
-            let rows = gridSize, columns = gridSize;
+            rows = gridSize, columns = gridSize;
             setGrid(rows, columns);
             setEventListener();
         }
