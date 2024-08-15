@@ -1,3 +1,5 @@
+"use strict";
+
 document.addEventListener("DOMContentLoaded", function() {
     
     const container = document.querySelector("#container");
@@ -19,4 +21,19 @@ document.addEventListener("DOMContentLoaded", function() {
             container.appendChild(gridItem);
         }
     }
+
+
+    let elementsArray = document.querySelectorAll(".grid-item");
+
+    elementsArray.forEach(function(elem) {
+        elem.addEventListener("mouseover", () => {
+            elem.style.backgroundColor = "blue";
+        });
+
+        /* optional hover effect - does not leave trail
+        elem.addEventListener("mouseout", () => {
+            elem.style.backgroundColor = "";
+        }); */
+    });
+    
 });

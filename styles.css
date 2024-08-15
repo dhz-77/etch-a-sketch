@@ -3,7 +3,6 @@
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .grid-item {
@@ -12,3 +11,8 @@
     height: 50px;
     border: 1px solid #000;
 }
+
+/* optional hover effect - does not leave trail - (substitutes JS function)
+.grid-item:hover {
+    background-color: blue;
+} */
