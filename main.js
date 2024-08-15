@@ -38,10 +38,51 @@ document.addEventListener("DOMContentLoaded", function() {
     
     function setEventListener() {
         let elementsArray = document.querySelectorAll(".grid-item");
-
+        
         elementsArray.forEach(function(elem) {
+            let count = 0;
+
             elem.addEventListener("mouseover", () => {
-                elem.style.backgroundColor = randomRGB();
+                
+                count++;
+                console.log(count);
+
+                if (count > 10) {
+                    return;
+                }
+
+                if (count === 1) {
+                    elem.style.opacity = 0.1;
+                    elem.style.backgroundColor = randomRGB();
+                }
+                else if (count === 2) {
+                    elem.style.opacity = 0.2;
+                }
+                else if (count === 3) {
+                    elem.style.opacity = 0.3;
+                }
+                else if (count === 4) {
+                    elem.style.opacity = 0.4;
+                }
+                else if (count === 5) {
+                    elem.style.opacity = 0.5;
+                }
+                else if (count === 6) {
+                    elem.style.opacity = 0.6;
+                }
+                else if (count === 7) {
+                    elem.style.opacity = 0.7;
+                }
+                else if (count === 8) {
+                    elem.style.opacity = 0.8;
+                }
+                else if (count === 9) {
+                    elem.style.opacity = 0.9;
+                }
+                else if (count === 10) {
+                    elem.style.opacity = 1;
+                }
+
             });
         });
     }
@@ -51,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     function randomRGB() {
+        
         return `rgb(${randColorNum()},${randColorNum()},${randColorNum()})`;
     }
 
