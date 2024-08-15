@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (gridSize === null || gridSize === "") {
             return;
+        } else if (gridSize > 100) {
+            alert("Number cannot be bigger than 100.");
+        } else if (gridSize < 0) {
+            alert("Number cannot be smaller than 0.");
         } else {
             container.innerHTML = "";
             rows = gridSize, columns = gridSize;
