@@ -5,18 +5,11 @@
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    /*align-content: stretch;*/
 }
 
 .grid-item {
-    /* flex: 1 0 0;*/
     box-sizing: border-box;
-    width: 50px;
+    /* width set by function */
     aspect-ratio: 1/1;
     border: 1px solid #000;
 }
-
-/* optional hover effect - does not leave trail - (substitutes JS function)
-.grid-item:hover {
-    background-color: blue;
-} */

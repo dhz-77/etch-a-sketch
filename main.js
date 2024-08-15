@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const container = document.querySelector("#container");
     const btn = document.querySelector("button");
 
-    let rows = 16, columns = 16;
+    let size = 16 // = width == height
 
-    setGrid(rows, columns);
+    setGrid(size);
     setEventListener();
 
     btn.addEventListener("click", () => {
-        const gridSize = window.prompt("Enter a number up to 100:", rows);
+        const gridSize = window.prompt("Enter a number up to 100:", size);
 
         if (gridSize === null || gridSize === "") {
             return;
@@ -21,21 +21,19 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Number cannot be smaller than 0.");
         } else {
             container.innerHTML = "";
-            rows = gridSize, columns = gridSize;
-            setGrid(rows, columns);
+            size = gridSize;
+            setGrid(size);
             setEventListener();
         }
     })
 
-    function setGrid(rows, columns) { // Create grid items and add to container div
-        for (let i = 0; i < rows; i++) {
-            for (let j = 0; j < columns; j++) {
+    function setGrid(size) { // Create grid items and add to container div
+        for (let i = 0; i < (size ** 2); i++) {
                 const gridItem = document.createElement("div");
                 gridItem.classList.add("grid-item");
-                gridItem.style.width = (960 / (rows)) + "px"
+                gridItem.style.width = (960 / (size)) + "px"
                 container.appendChild(gridItem);
             }
-        }
     }
     
     function setEventListener() {
